@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UIKIT-Academy — Component Preview</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./src/components/button/ac-button.tokens.css" />
+  <script type="module" src="./src/index.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--color-black, #141518);
+      color: var(--color-white, #e7e7e7);
+      padding: 40px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-family: var(--heading-font, 'Merriweather', serif);
+      font-size: var(--h4, 30px);
+      margin-bottom: 32px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: var(--font-size-lg, 18px);
+      margin: 24px 0 12px;
+      font-weight: 600;
+      color: var(--color-white-medium, #CECECE);
+    }
+
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .label {
+      font-size: 12px;
+      color: var(--color-white-medium, #CECECE);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: 100%;
+      margin-bottom: 4px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--color-black-stroke, #40424A);
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>UIKIT-Academy — ac-button</h1>
+
+  <!-- ════════ PRIMARY ════════ -->
+  <div class="section">
+    <h2>Primary</h2>
+
+    <p class="label">Filled</p>
+    <div class="row">
+      <ac-button variant="primary">Button</ac-button>
+      <ac-button variant="primary" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="primary" size="small">Button</ac-button>
+      <ac-button variant="primary" size="small" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="primary" disabled>Button</ac-button>
+      <ac-button variant="primary" disabled icon><span slot="icon">+</span>Button</ac-button>
+    </div>
+
+    <p class="label">Outline</p>
+    <div class="row">
+      <ac-button variant="primary" appearance="outline">Button</ac-button>
+      <ac-button variant="primary" appearance="outline" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="primary" appearance="outline" size="small">Button</ac-button>
+      <ac-button variant="primary" appearance="outline" size="small" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="primary" appearance="outline" disabled>Button</ac-button>
+      <ac-button variant="primary" appearance="outline" disabled icon><span slot="icon">+</span>Button</ac-button>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ════════ SECONDARY ════════ -->
+  <div class="section">
+    <h2>Secondary</h2>
+
+    <p class="label">Filled</p>
+    <div class="row">
+      <ac-button variant="secondary">Button</ac-button>
+      <ac-button variant="secondary" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="secondary" size="small">Button</ac-button>
+      <ac-button variant="secondary" size="small" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="secondary" disabled>Button</ac-button>
+      <ac-button variant="secondary" disabled icon><span slot="icon">+</span>Button</ac-button>
+    </div>
+
+    <p class="label">Outline</p>
+    <div class="row">
+      <ac-button variant="secondary" appearance="outline">Button</ac-button>
+      <ac-button variant="secondary" appearance="outline" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="secondary" appearance="outline" size="small">Button</ac-button>
+      <ac-button variant="secondary" appearance="outline" size="small" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="secondary" appearance="outline" disabled>Button</ac-button>
+      <ac-button variant="secondary" appearance="outline" disabled icon><span slot="icon">+</span>Button</ac-button>
+    </div>
+  </div>
+
+</body>
+</html>

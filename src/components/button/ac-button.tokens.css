@@ -1,0 +1,37 @@
+/* Components*/
+
+:root{
+  /* Color tokens*/
+  --color-primary: var(--color-primary-600);
+  --color-primary-light: var(--color-primary-500);
+  --color-acent: var(--color-secondary-600);
+  --color-acent-light: var(--color-secondary-500);
+
+  /* Dimensiones Generales */
+  --button-height-base: var(--component-height-base);
+  --button-height-small: var(--component-height-small);
+  --button-rounded: var(--border-radius-sm);
+
+  /* Estados y Colores Globales de Botón */
+  --button-text-color: var(--color-white);
+  --button-color-disable: var(--color-white-dark);
+  --button-text-color-disable: var(--color-black-light);
+
+  /* Botón Primario */
+  --primary-button-primary-background: var(--colors-surface-primary);
+  --primary-button-primary-background-outline: var(--colors-surface-primary-light);
+  --primary-button-primary-background-hover: var(--color-primary-500);
+  --primary-button-primary-color-outline-hover: var(--color-primary-400);
+
+  /* Botón Secundario */
+  --secondary-button-secondary-color-hover: var(--color-black-light);
+  --secondary-button-secondary-color-outline-hover: var(--color-black-stroke);
+
+  /* Botón Terciario */
+  --tertiary-button-tertiary-color: var(--color-black-medium);
+  --tertiary-button-tertiary-color-outline: var(--color-black-stroke);
+  --tertiary-button-secondary-color-hover: var(--color-black-light);
+  --tertiary-button-secondary-color-outline-hover: var(--color-black-stroke);
+
+    
+}
