@@ -3,17 +3,32 @@
   "version": "1.0.0",
   "type": "module",
   "main": "src/index.js",
+  "files": [
+    "src/",
+    "styles/",
+    "dist/"
+  ],
+  "exports": {
+    ".": "./src/index.js",
+    "./styles/global.css": "./styles/global.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "test": "web-test-runner"
   },
-  "keywords": ["web-components", "lit", "design-system", "ui-kit"],
+  "keywords": [
+    "web-components",
+    "lit",
+    "design-system",
+    "ui-kit"
+  ],
   "author": "Alerta Academy",
   "license": "ISC",
   "description": "UIKIT-Academy — Biblioteca de Web Components con Lit",
   "dependencies": {
+    "heroicons": "^2.2.0",
     "lit": "^3.3.2"
   },
   "devDependencies": {

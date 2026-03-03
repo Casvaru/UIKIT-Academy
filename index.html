@@ -68,24 +68,16 @@
   <div class="section">
     <h2>Primary</h2>
 
-    <p class="label">Filled</p>
     <div class="row">
       <ac-button variant="primary">Button</ac-button>
-      <ac-button variant="primary" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="primary" icon-name="plus">Add</ac-button>
+      <ac-button variant="primary" icon-name="plus" icon-only aria-label="Add"></ac-button>
       <ac-button variant="primary" size="small">Button</ac-button>
-      <ac-button variant="primary" size="small" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="primary" size="small" icon-name="pencil">Edit</ac-button>
+      <ac-button variant="primary" size="small" icon-name="pencil" icon-only aria-label="Edit"></ac-button>
       <ac-button variant="primary" disabled>Button</ac-button>
-      <ac-button variant="primary" disabled icon><span slot="icon">+</span>Button</ac-button>
-    </div>
-
-    <p class="label">Outline</p>
-    <div class="row">
-      <ac-button variant="primary" appearance="outline">Button</ac-button>
-      <ac-button variant="primary" appearance="outline" icon><span slot="icon">+</span>Button</ac-button>
-      <ac-button variant="primary" appearance="outline" size="small">Button</ac-button>
-      <ac-button variant="primary" appearance="outline" size="small" icon><span slot="icon">+</span>Button</ac-button>
-      <ac-button variant="primary" appearance="outline" disabled>Button</ac-button>
-      <ac-button variant="primary" appearance="outline" disabled icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="primary" disabled icon-name="check">Save</ac-button>
+      <ac-button variant="primary" disabled icon-name="check" icon-only aria-label="Save"></ac-button>
     </div>
   </div>
 
@@ -95,24 +87,39 @@
   <div class="section">
     <h2>Secondary</h2>
 
-    <p class="label">Filled</p>
     <div class="row">
       <ac-button variant="secondary">Button</ac-button>
-      <ac-button variant="secondary" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="secondary" icon-name="trash">Delete</ac-button>
+      <ac-button variant="secondary" icon-name="trash" icon-only aria-label="Delete"></ac-button>
       <ac-button variant="secondary" size="small">Button</ac-button>
-      <ac-button variant="secondary" size="small" icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="secondary" size="small">Button</ac-button>
+      <ac-button variant="secondary" size="small" icon-name="download">Download</ac-button>
+      <ac-button variant="secondary" size="small" icon-name="download" icon-only aria-label="Download"></ac-button>
       <ac-button variant="secondary" disabled>Button</ac-button>
-      <ac-button variant="secondary" disabled icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="secondary" disabled>Button</ac-button>
+      <ac-button variant="secondary" disabled icon-name="heart">Like</ac-button>
+      <ac-button variant="secondary" disabled icon-name="heart" icon-only aria-label="Like"></ac-button>
     </div>
+  </div>
 
-    <p class="label">Outline</p>
+  <hr />
+
+  <!-- ════════ TERTIARY ════════ -->
+  <div class="section">
+    <h2>Tertiary</h2>
+
     <div class="row">
-      <ac-button variant="secondary" appearance="outline">Button</ac-button>
-      <ac-button variant="secondary" appearance="outline" icon><span slot="icon">+</span>Button</ac-button>
-      <ac-button variant="secondary" appearance="outline" size="small">Button</ac-button>
-      <ac-button variant="secondary" appearance="outline" size="small" icon><span slot="icon">+</span>Button</ac-button>
-      <ac-button variant="secondary" appearance="outline" disabled>Button</ac-button>
-      <ac-button variant="secondary" appearance="outline" disabled icon><span slot="icon">+</span>Button</ac-button>
+      <ac-button variant="tertiary">Button</ac-button>
+      <ac-button variant="tertiary" icon-name="search">Search</ac-button>
+      <ac-button variant="tertiary" icon-name="search" icon-only aria-label="Search"></ac-button>
+      <ac-button variant="tertiary" size="small">Button</ac-button>
+      <ac-button variant="tertiary" size="small">Button</ac-button>
+      <ac-button variant="tertiary" size="small" icon-name="star">Favorite</ac-button>
+      <ac-button variant="tertiary" size="small" icon-name="star" icon-only aria-label="Favorite"></ac-button>
+      <ac-button variant="tertiary" disabled>Button</ac-button>
+      <ac-button variant="tertiary" disabled>Button</ac-button>
+      <ac-button variant="tertiary" disabled icon-name="bell">Notify</ac-button>
+      <ac-button variant="tertiary" disabled icon-name="bell" icon-only aria-label="Notify"></ac-button>
     </div>
   </div>
 

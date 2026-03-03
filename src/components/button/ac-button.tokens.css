@@ -22,16 +22,21 @@
   --primary-button-primary-background-outline: var(--colors-surface-primary-light);
   --primary-button-primary-background-hover: var(--color-primary-500);
   --primary-button-primary-color-outline-hover: var(--color-primary-400);
+  /* Focus ring specifically for primary buttons (accent color) */
+  --primary-button-focus-ring: var(--color-acent, var(--color-secondary-600, #680CFF));
 
   /* Botón Secundario */
-  --secondary-button-secondary-color-hover: var(--color-black-light);
-  --secondary-button-secondary-color-outline-hover: var(--color-black-stroke);
+  --secondary-button-secondary-background-hover: var(--color-black-light);
+  --secondary-button-secondary-border-hover: var(--color-black-stroke);
 
   /* Botón Terciario */
-  --tertiary-button-tertiary-color: var(--color-black-medium);
-  --tertiary-button-tertiary-color-outline: var(--color-black-stroke);
-  --tertiary-button-secondary-color-hover: var(--color-black-light);
-  --tertiary-button-secondary-color-outline-hover: var(--color-black-stroke);
+  --tertiary-button-tertiary-background: var(--color-black-medium);
+  --tertiary-button-tertiary-border: var(--color-black-stroke);
+  --tertiary-button-tertiary-background-hover: var(--color-black-light);
+  --tertiary-button-tertiary-border-hover: var(--color-black-stroke);
+  /* Active state for tertiary when pressed */
+  --tertiary-button-tertiary-background-active: color-mix(in srgb, var(--color-black-medium) 80%, #000 20%);
+  --focus-ring-color: rgba(12, 65, 255, 0.9);
 
     
 }

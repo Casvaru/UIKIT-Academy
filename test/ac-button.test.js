@@ -26,10 +26,11 @@ describe('ac-button', () => {
     expect(inner.classList.contains('ac-button--secondary')).to.be.true;
   });
 
-  it('should apply outline appearance class', async () => {
-    const el = await fixture(html`<ac-button appearance="outline">Outline</ac-button>`);
+  it('should apply tertiary variant class', async () => {
+    const el = await fixture(html`<ac-button variant="tertiary">Tertiary</ac-button>`);
+    expect(el.variant).to.equal('tertiary');
     const inner = el.shadowRoot.querySelector('button');
-    expect(inner.classList.contains('ac-button--outline')).to.be.true;
+    expect(inner.classList.contains('ac-button--tertiary')).to.be.true;
   });
 
   it('should apply small size class', async () => {
@@ -45,32 +46,25 @@ describe('ac-button', () => {
     expect(inner.classList.contains('ac-button--disabled')).to.be.true;
   });
 
-  it('should render icon slot when icon is true', async () => {
-    const el = await fixture(html`
-      <ac-button icon>
-        <span slot="icon">★</span>
-        With Icon
-      </ac-button>
-    `);
+  it('should render icon from heroicons when icon-name is provided', async () => {
+    const el = await fixture(html`<ac-button icon-name="plus">Add</ac-button>`);
     const iconSlot = el.shadowRoot.querySelector('.ac-button__icon');
     expect(iconSlot).to.exist;
   });
 
-  it('should NOT render icon slot when icon is false', async () => {
-    const el = await fixture(html`<ac-button>No Icon</ac-button>`);
-    const iconSlot = el.shadowRoot.querySelector('.ac-button__icon');
-    expect(iconSlot).to.not.exist;
-  });
-
-  it('should combine variant + appearance + size classes', async () => {
+  it('should combine variant + size classes', async () => {
     const el = await fixture(html`
-      <ac-button variant="secondary" appearance="outline" size="small">
+      <ac-button variant="secondary" size="small">
         Combo
       </ac-button>
     `);
     const inner = el.shadowRoot.querySelector('button');
     expect(inner.classList.contains('ac-button--secondary')).to.be.true;
-    expect(inner.classList.contains('ac-button--outline')).to.be.true;
     expect(inner.classList.contains('ac-button--small')).to.be.true;
+  });
+
+  it('should support icon-name attribute with heroicons', async () => {
+    const el = await fixture(html`<ac-button icon-name="plus">Add Item</ac-button>`);
+    expect(el.iconName).to.equal('plus');
   });
 });
