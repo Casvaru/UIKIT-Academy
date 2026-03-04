@@ -1,0 +1,10 @@
+/* Section Header */
+
+:root{
+  --section-header-padding: var(--spacing-lg);
+  --section-header-gap: var(--spacing-base);
+  --section-header-title-font: var(--heading-font);
+  --section-header-title-color: var(--color-white);
+  --section-header-description-font: var(--body-font);
+  --section-header-description-color: var(--color-white-dark);
+}

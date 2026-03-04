@@ -1,6 +1,6 @@
 {
-  "name": "uikit-academy",
-  "version": "1.0.0",
+  "name": "alerta-academy-ui-kit",
+  "version": "1.0.13",
   "type": "module",
   "main": "src/index.js",
   "files": [
@@ -8,13 +8,16 @@
     "styles/",
     "dist/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": "./src/index.js",
-    "./styles/global.css": "./styles/global.css"
+    "./dist/styles.css": "./dist/styles.css"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/build-css.js",
     "preview": "vite preview",
     "test": "web-test-runner"
   },

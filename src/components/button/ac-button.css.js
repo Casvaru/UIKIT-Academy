@@ -5,38 +5,40 @@ export const acButtonStyles = css`
     display: inline-block;
   }
 
-  /* ─── Base Button ─── */
+  /* ═══════════════════════════════════════
+     BASE BUTTON - All fallbacks defined inline
+     ═══════════════════════════════════════ */
   .ac-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-sm);
-    font-family: var(--body-font);
-    font-size: var(--font-size-sm);
+    gap: var(--spacing-sm, 8px);
+    font-family: var(--body-font) !important;
+    font-size: var(--font-size-sm, 14px);
     font-weight: bold;
     cursor: pointer;
-    border: var(--border-sm) solid transparent;
-    border-radius: var(--button-rounded, var(--border-radius-sm));
-    height: var(--button-height-base);
-    padding: 0 var(--spacing-lg);
+    text-decoration: none;
+    border: var(--border-sm, 2px) solid transparent;
+    border-radius: var(--button-rounded, var(--border-radius-sm, 8px));
+    height: var(--button-height-base, 40px);
+    padding: 0 var(--spacing-lg, 24px);
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     outline: none;
     user-select: none;
     white-space: nowrap;
-    color: var(--button-text-color);
+    color: var(--button-text-color, #e7e7e7);
   }
 
-  /* ─── Size: small ─── */
+  /* Size: small */
   .ac-button--small {
-    height: var(--button-height-small);
-    font-size: var(--font-size-sm);
-    padding: 0 var(--spacing-lg);
+    height: var(--button-height-small, 36px);
+    font-size: var(--font-size-sm, 14px);
+    padding: 0 var(--spacing-lg, 24px);
   }
 
   /* ═══════════════════════════════════════
      PRIMARY variant - filled
      ═══════════════════════════════════════ */
-
   .ac-button--primary {
     background-color: var(--primary-button-primary-background, var(--color-primary-600, #0C41FF));
     color: var(--button-text-color, #e7e7e7);
@@ -54,7 +56,6 @@ export const acButtonStyles = css`
   /* ═══════════════════════════════════════
      SECONDARY variant - no background
      ═══════════════════════════════════════ */
-
   .ac-button--secondary {
     background-color: transparent;
     color: var(--button-text-color, #e7e7e7);
@@ -73,7 +74,6 @@ export const acButtonStyles = css`
   /* ═══════════════════════════════════════
      TERTIARY variant - outline
      ═══════════════════════════════════════ */
-
   .ac-button--tertiary {
     background-color: var(--tertiary-button-tertiary-background, var(--color-black-medium, #1F2024));
     color: var(--button-text-color, #e7e7e7);
@@ -104,7 +104,7 @@ export const acButtonStyles = css`
     opacity: 0.7;
   }
 
-  /* Focus styles for accessibility (WCAG): visible, high-contrast ring */
+  /* Focus styles for accessibility (WCAG) */
   .ac-button--primary:focus-visible {
     outline: none;
     box-shadow: 0 0 0 3px var(--primary-button-focus-ring, var(--focus-ring-color, rgba(12,65,255,0.9)));
@@ -119,7 +119,7 @@ export const acButtonStyles = css`
     box-shadow: 0 0 0 3px var(--focus-ring-color, rgba(12,65,255,0.9));
   }
 
-  /* ─── Icon slot ─── */
+  /* Icon slot */
   .ac-button__icon {
     display: inline-flex;
     align-items: center;
@@ -142,14 +142,26 @@ export const acButtonStyles = css`
     color: inherit;
   }
 
-  /* Icon-only button: square, centered icon */
+  /* Icon-only button */
   .ac-button--icon-only {
     padding: 0;
-    width: var(--button-height-base);
+    width: var(--button-height-base, 40px);
     justify-content: center;
   }
 
   .ac-button--icon-only.ac-button--small {
-    width: var(--button-height-small);
+    width: var(--button-height-small, 36px);
+  }
+
+  @media (max-width: 1024px) {
+    :host {
+      display: block;
+      width: 100%;
+    }
+
+    .ac-button {
+      width: 100%;
+      display: flex;
+    }
   }
 `;

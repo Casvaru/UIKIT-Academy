@@ -51,6 +51,8 @@ export class AcButton extends LitElement {
     iconName: { type: String, reflect: true, attribute: 'icon-name' },
     iconOnly: { type: Boolean, reflect: true, attribute: 'icon-only' },
     ariaLabel: { type: String, attribute: 'aria-label' },
+    href: { type: String },
+    target: { type: String },
   };
 
   constructor() {
@@ -61,6 +63,8 @@ export class AcButton extends LitElement {
     this.iconName = undefined;
     this.iconOnly = false;
     this.ariaLabel = '';
+    this.href = undefined;
+    this.target = '_self';
   }
 
   connectedCallback() {
@@ -138,20 +142,40 @@ export class AcButton extends LitElement {
 
   render() {
     const iconSVG = this._getIconSVG();
-    
+    const content = html`
+      ${iconSVG
+        ? html`<span class="ac-button__icon">${unsafeHTML(iconSVG)}</span>`
+        : html`<slot name="icon"></slot>`}
+
+      ${this.iconOnly ? '' : html`<slot></slot>`}
+    `;
+
+    const classes = this._getClasses();
+
+    if (this.href) {
+      return html`
+        <a
+          part="button"
+          class=${classes}
+          href=${this.href}
+          target=${this.target}
+          aria-label=${this.iconOnly && this.ariaLabel ? this.ariaLabel : undefined}
+          ?disabled=${this.disabled}
+        >
+          ${content}
+        </a>
+      `;
+    }
+
     return html`
       <button
         part="button"
-        class=${this._getClasses()}
+        class=${classes}
         ?disabled=${this.disabled}
         aria-disabled=${this.disabled}
         aria-label=${this.iconOnly && this.ariaLabel ? this.ariaLabel : undefined}
       >
-        ${iconSVG
-          ? html`<span class="ac-button__icon">${unsafeHTML(iconSVG)}</span>`
-          : html`<slot name="icon"></slot>`}
-
-        ${this.iconOnly ? '' : html`<slot></slot>`}
+        ${content}
       </button>
     `;
   }

@@ -1,0 +1,15 @@
+/* Header */
+
+:root {
+  --header-height: 72px;
+  --header-padding-x: var(--spacing-xl, 32px);
+  --header-padding-y: 0;
+  --header-bg: var(--color-black, #141518);
+  --header-border-color: var(--color-black-stroke, #40424A);
+  
+  --header-logo-margin-right: var(--spacing-3xl, 48px);
+  --header-nav-gap: var(--spacing-xl, 32px);
+  --header-actions-gap: var(--spacing-lg, 24px);
+  
+  --header-profile-size: 32px;
+}

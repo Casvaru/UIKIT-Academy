@@ -1,0 +1,22 @@
+/**
+ * Tokens for ac-card-dashboard
+ * Include this CSS file if you want to override default variables per component.
+ */
+
+ :root{
+  --card-dashboard-bg: var(--color-black-blue);
+  --card-dashboard-border: var(--color-white-blue);
+  --card-dashboard-radius: var(--border-radius-base);
+  --card-dashboard-padding: var(--spacing-lg);
+  --card-dashboard-gap: var(--spacing-base);
+  --card-dashboard-icon-bg: rgba(0, 113, 247, 0.15);
+  --card-dashboard-icon-color: var(--color-primary-600);
+ }
+/*
+  --card-dashboard-bg: #1F2024;
+  --card-dashboard-radius: 16px;
+  --card-dashboard-padding: 24px;
+  --card-dashboard-gap: 16px;
+  --card-dashboard-icon-bg: rgba(0, 113, 247, 0.15);
+  --card-dashboard-icon-color: #0071F7;
+*/

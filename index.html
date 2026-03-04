@@ -6,6 +6,9 @@
   <title>UIKIT-Academy — Component Preview</title>
   <link rel="stylesheet" href="./styles/global.css" />
   <link rel="stylesheet" href="./src/components/button/ac-button.tokens.css" />
+  <link rel="stylesheet" href="./src/components/section-header/ac-section-header.tokens.css" />
+  <link rel="stylesheet" href="./src/components/card-dashboard/ac-card-dashboard.tokens.css" />
+  <link rel="stylesheet" href="./src/components/header/ac-header.tokens.css" />
   <script type="module" src="./src/index.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -121,6 +124,101 @@
       <ac-button variant="tertiary" disabled icon-name="bell">Notify</ac-button>
       <ac-button variant="tertiary" disabled icon-name="bell" icon-only aria-label="Notify"></ac-button>
     </div>
+  </div>
+
+  <hr />
+
+  <!-- ════════ ac-section-header ════════ -->
+  <h1>UIKIT-Academy — ac-section-header</h1>
+
+  <div class="section">
+    <ac-section-header
+      heading="Panel de Control"
+      description="Gestiona tus usuarios, proyectos y configuraciones del sistema">
+      <ac-button slot="button" variant="primary" icon-name="plus">Nuevo Usuario</ac-button>
+    </ac-section-header>
+  </div>
+
+  <hr />
+
+  <!-- ════════ ac-card-dashboard ════════ -->
+  <h1>UIKIT-Academy — ac-card-dashboard</h1>
+
+  <div class="section" style="max-width: 400px; display: flex; flex-direction: column; gap: 16px;">
+    <ac-card-dashboard
+      heading="Total Students"
+      value="1,240"
+      description="Active learners this month"
+      icon-name="users"
+      trend-label="+12% ↑"
+      trend-status="success">
+    </ac-card-dashboard>
+    
+    <ac-card-dashboard
+      heading="Course Completion"
+      value="85%"
+      description="Finished courses this week"
+      icon-name="book-open"
+      trend-label="-3% ↓"
+      trend-status="danger">
+    </ac-card-dashboard>
+
+    <ac-card-dashboard
+      heading="New Enrollments"
+      value="42"
+      description="Pending review"
+      icon-name="user-group"
+      trend-label="Neutral"
+      trend-status="neutral">
+    </ac-card-dashboard>
+  </div>
+
+  <hr />
+
+  <!-- ════════ ac-header ════════ -->
+  <h1>UIKIT-Academy — ac-header</h1>
+  
+  <div class="section" style="background-color: var(--color-black, #141518); padding: 20px 0; border-radius: 8px;">
+    <h2>With Profile</h2>
+    <ac-header has-profile>
+      <div slot="logo" style="width: 120px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: bold;">
+        ALERTA Academy
+      </div>
+      <nav slot="nav" style="display: flex; gap: 32px; font-size: 14px; font-weight: 600; color: #e7e7e7;">
+        <a href="#" style="color: inherit; text-decoration: none;">Home</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Explore</a>
+        <a href="#" style="color: inherit; text-decoration: none;">My learning</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Find couch</a>
+      </nav>
+      <div slot="actions" style="display: flex; gap: 16px;">
+        <ac-button variant="tertiary" icon-name="search" icon-only aria-label="Search" size="small"></ac-button>
+        <ac-button variant="tertiary" icon-name="shopping-cart" icon-only aria-label="Cart" size="small"></ac-button>
+        <ac-button variant="tertiary" icon-name="heart" icon-only aria-label="Favorites" size="small"></ac-button>
+        <ac-button variant="tertiary" icon-name="translate" icon-only aria-label="Language" size="small"></ac-button>
+        <ac-button variant="tertiary" icon-name="bell" icon-only aria-label="Notifications" size="small"></ac-button>
+      </div>
+      <img slot="profile" src="https://i.pravatar.cc/150?img=68" alt="Profile" />
+    </ac-header>
+
+    <h2 style="margin-top: 40px;">Without Profile</h2>
+    <ac-header>
+      <div slot="logo" style="width: 120px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: bold;">
+        ALERTA Academy
+      </div>
+      <nav slot="nav" style="display: flex; gap: 32px; font-size: 14px; font-weight: 600; color: #e7e7e7;">
+        <a href="#" style="color: inherit; text-decoration: none;">Home</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Explore</a>
+        <a href="#" style="color: inherit; text-decoration: none;">My learning</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Find couch</a>
+      </nav>
+      <div slot="actions" style="display: flex; gap: 16px;">
+        <ac-button variant="tertiary" icon-name="search" icon-only aria-label="Search" size="small"></ac-button>
+        <ac-button variant="tertiary" icon-name="shopping-cart" icon-only aria-label="Cart" size="small"></ac-button>
+        <ac-button variant="tertiary" icon-name="heart" icon-only aria-label="Favorites" size="small"></ac-button>
+        <ac-button variant="tertiary" icon-name="translate" icon-only aria-label="Language" size="small"></ac-button>
+        <ac-button variant="tertiary" icon-name="bell" icon-only aria-label="Notifications" size="small"></ac-button>
+      </div>
+    </ac-header>
   </div>
 
 </body>

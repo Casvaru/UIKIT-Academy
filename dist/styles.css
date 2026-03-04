@@ -7,8 +7,6 @@
   --heading-font: 'Merriweather', sans-serif;
   --body-font: 'Lato', sans-serif;
 
-
-
   /* Escala Primary */
   --color-primary-100: #E5EBFF;
   --color-primary-200: #CCD7FF;
@@ -50,8 +48,6 @@
   --color-white: #e7e7e7;
   --color-white-medium: #CECECE;
   --color-white-dark: #A4A4A4;
-  --color-black-blue: #141518;
-  --color-white-blue: #1F2937;
 
   /* White transparent */
   --color-white-10: rgba(231, 231, 231, 0.1);
@@ -140,4 +136,74 @@
   /* Text area */
   --text-area-height-base: 150px;
   --text-area-height-advanced: 320px;
+}
+
+/* Component Tokens */
+
+/* Components*/
+
+:root{
+  /* Color tokens*/
+  --color-primary: var(--color-primary-600);
+  --color-primary-light: var(--color-primary-500);
+  --color-acent: var(--color-secondary-600);
+  --color-acent-light: var(--color-secondary-500);
+
+  /* Dimensiones Generales */
+  --button-height-base: var(--component-height-base);
+  --button-height-small: var(--component-height-small);
+  --button-rounded: var(--border-radius-sm);
+
+  /* Estados y Colores Globales de Botón */
+  --button-text-color: var(--color-white);
+  --button-color-disable: var(--color-white-dark);
+  --button-text-color-disable: var(--color-black-light);
+
+  /* Botón Primario */
+  --primary-button-primary-background: var(--colors-surface-primary);
+  --primary-button-primary-background-outline: var(--colors-surface-primary-light);
+  --primary-button-primary-background-hover: var(--color-primary-500);
+  --primary-button-primary-color-outline-hover: var(--color-primary-400);
+  /* Focus ring specifically for primary buttons (accent color) */
+  --primary-button-focus-ring: var(--color-acent, var(--color-secondary-600, #680CFF));
+
+  /* Botón Secundario */
+  --secondary-button-secondary-background-hover: var(--color-black-light);
+  --secondary-button-secondary-border-hover: var(--color-black-stroke);
+
+  /* Botón Terciario */
+  --tertiary-button-tertiary-background: var(--color-black-medium);
+  --tertiary-button-tertiary-border: var(--color-black-stroke);
+  --tertiary-button-tertiary-background-hover: var(--color-black-light);
+  --tertiary-button-tertiary-border-hover: var(--color-black-stroke);
+  /* Active state for tertiary when pressed */
+  --tertiary-button-tertiary-background-active: color-mix(in srgb, var(--color-black-medium) 80%, #000 20%);
+  --focus-ring-color: rgba(12, 65, 255, 0.9);
+
+    
+}
+
+/**
+ * Tokens for ac-card-dashboard
+ * Include this CSS file if you want to override default variables per component.
+ */
+/*
+  --card-dashboard-bg: #1F2024;
+  --card-dashboard-radius: 16px;
+  --card-dashboard-padding: 24px;
+  --card-dashboard-gap: 16px;
+  --card-dashboard-icon-bg: rgba(0, 113, 247, 0.15);
+  --card-dashboard-icon-color: #0071F7;
+*/
+
+
+/* Section Header */
+
+:root{
+  --section-header-padding: var(--spacing-lg);
+  --section-header-gap: var(--spacing-base);
+  --section-header-title-font: var(--heading-font);
+  --section-header-title-color: var(--color-white);
+  --section-header-description-font: var(--body-font);
+  --section-header-description-color: var(--color-white-dark);
 }
