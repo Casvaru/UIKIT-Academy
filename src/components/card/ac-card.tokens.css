@@ -1,0 +1,17 @@
+/* ac-card tokens */
+
+:root {
+  --ac-card-bg: var(--color-black-light);
+  --ac-card-border-color: var(--color-black-stroke);
+  --ac-card-border-width: var(--border-xs);
+  --ac-card-radius: var(--border-radius-sm);
+  --ac-card-padding: var(--spacing-base);
+
+  --ac-card-title-font: var(--heading-font);
+  --ac-card-title-size: var(--h6);
+  --ac-card-title-color: var(--color-white);
+  --ac-card-title-weight: bold;
+
+  --ac-card-icon-color: var(--color-white-medium);
+  --ac-card-arrow-color: var(--color-white-medium);
+}

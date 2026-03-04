@@ -1,6 +1,6 @@
 /* Components*/
 
-:root{
+:root {
   /* Color tokens*/
   --color-primary: var(--color-primary-600);
   --color-primary-light: var(--color-primary-500);
@@ -38,5 +38,23 @@
   --tertiary-button-tertiary-background-active: color-mix(in srgb, var(--color-black-medium) 80%, #000 20%);
   --focus-ring-color: rgba(12, 65, 255, 0.9);
 
+/* =========================================
+     Variante: Nav
+     ========================================= */
+   /* Utilizamos un fallback directo por si el token global falla, 
+     asegurando siempre el cumplimiento de contraste WCAG AA */
+   --ac-btn-nav-bg-normal: var(--ac-btn-nav-bg-normal, transparent);
+   --ac-btn-nav-text-normal: var(--ac-btn-nav-text-normal, #4B5563);
+
+   --ac-btn-nav-bg-hover: var(--color-primary-20);
+   --ac-btn-nav-text-hover: var(--color-primary-600);
+
+   --ac-btn-nav-bg-active: transparent;
+   --ac-btn-nav-text-active: var(--color-primary-300);
+
+   --ac-btn-nav-bg-disabled: var(--ac-btn-nav-bg-disabled, transparent);
+   --ac-btn-nav-text-disabled: var(--ac-btn-nav-text-disabled, #9CA3AF);
+
+   --ac-btn-nav-indicator-active: var(--ac-btn-nav-indicator-active, #2563EB);
     
 }

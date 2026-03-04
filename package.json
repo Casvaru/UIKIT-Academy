@@ -1,6 +1,6 @@
 {
   "name": "alerta-academy-ui-kit",
-  "version": "1.0.13",
+  "version": "1.0.20",
   "type": "module",
   "main": "src/index.js",
   "files": [
@@ -19,6 +19,7 @@
     "dev": "vite",
     "build": "vite build && node scripts/build-css.js",
     "preview": "vite preview",
+    "publish": "pnpm run build && npm publish",
     "test": "web-test-runner"
   },
   "keywords": [
@@ -31,6 +32,7 @@
   "license": "ISC",
   "description": "UIKIT-Academy — Biblioteca de Web Components con Lit",
   "dependencies": {
+    "alerta-academy-ui-kit": "link:",
     "heroicons": "^2.2.0",
     "lit": "^3.3.2"
   },

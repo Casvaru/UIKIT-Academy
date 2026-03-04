@@ -75,6 +75,28 @@
   --color-black-80: rgba(20, 21, 24, 0.8);
   --color-black-90: rgba(20, 21, 24, 0.9);
 
+  /* Primary transparent */
+  --color-primary-10: rgba(12, 65, 255, 0.1);
+  --color-primary-20: rgba(12, 65, 255, 0.2);
+  --color-primary-30: rgba(12, 65, 255, 0.3);
+  --color-primary-40: rgba(12, 65, 255, 0.4);
+  --color-primary-50: rgba(12, 65, 255, 0.5);
+  --color-primary-60: rgba(12, 65, 255, 0.6);
+  --color-primary-70: rgba(12, 65, 255, 0.7);
+  --color-primary-80: rgba(12, 65, 255, 0.8);
+  --color-primary-90: rgba(12, 65, 255, 0.9);
+
+  /* Secondary transparent */
+  --color-secondary-10: rgba(104, 12, 255, 0.1);
+  --color-secondary-20: rgba(104, 12, 255, 0.2);
+  --color-secondary-30: rgba(104, 12, 255, 0.3);
+  --color-secondary-40: rgba(104, 12, 255, 0.4);
+  --color-secondary-50: rgba(104, 12, 255, 0.5);
+  --color-secondary-60: rgba(104, 12, 255, 0.6);
+  --color-secondary-70: rgba(104, 12, 255, 0.7);
+  --color-secondary-80: rgba(104, 12, 255, 0.8);
+  --color-secondary-90: rgba(104, 12, 255, 0.9);
+
   /* Spacing*/
   --spacing-xs: 4px;
   --spacing-sm: 8px;

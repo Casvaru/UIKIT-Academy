@@ -38,7 +38,9 @@ export class AcHeader extends LitElement {
     return html`
       <header class="header">
         <div class="header__logo">
-          <slot name="logo"></slot>
+          <slot name="logo">
+            <img src="https://i.postimg.cc/g0gnsX7C/logo.png
+          </slot>
         </div>
         
         <div class="header__nav">

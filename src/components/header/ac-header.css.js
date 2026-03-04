@@ -28,6 +28,11 @@ export const acHeaderStyles = css`
     flex-shrink: 0;
   }
 
+  .header__logo-img {
+    height: 32px;
+    display: block;
+  }
+
   .header__nav {
     display: flex;
     align-items: center;

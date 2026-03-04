@@ -17,6 +17,8 @@ import star from 'heroicons/24/solid/star.svg?raw';
 import magnifyingGlass from 'heroicons/24/solid/magnifying-glass.svg?raw';
 import bars3 from 'heroicons/24/solid/bars-3.svg?raw';
 import bell from 'heroicons/24/solid/bell.svg?raw';
+import shoppingCart from 'heroicons/24/solid/shopping-cart.svg?raw';
+import language from 'heroicons/24/solid/language.svg?raw';
 
 /**
  * @element ac-button
@@ -46,8 +48,10 @@ export class AcButton extends LitElement {
 
   static properties = {
     variant: { type: String, reflect: true },
+    types: { type: String, reflect: true },
     size: { type: String, reflect: true },
     disabled: { type: Boolean, reflect: true },
+    active: { type: Boolean, reflect: true },
     iconName: { type: String, reflect: true, attribute: 'icon-name' },
     iconOnly: { type: Boolean, reflect: true, attribute: 'icon-only' },
     ariaLabel: { type: String, attribute: 'aria-label' },
@@ -58,8 +62,10 @@ export class AcButton extends LitElement {
   constructor() {
     super();
     this.variant = 'primary';
+    this.types = undefined;
     this.size = 'base';
     this.disabled = false;
+    this.active = false;
     this.iconName = undefined;
     this.iconOnly = false;
     this.ariaLabel = '';
@@ -97,6 +103,9 @@ export class AcButton extends LitElement {
       'search': magnifyingGlass,
       'menu': bars3,
       'bell': bell,
+      'shopping-cart': shoppingCart,
+      'language': language,
+      'translate': language,
     };
 
     let iconSvg = iconMap[this.iconName];
@@ -124,7 +133,15 @@ export class AcButton extends LitElement {
 
   /** Build CSS class list from properties */
   _getClasses() {
-    const classes = ['ac-button', `ac-button--${this.variant}`];
+    const classes = ['ac-button'];
+
+    // If 'types' is defined (e.g. types="nav"), use it. Otherwise fallback to variant.
+    if (this.types) {
+      classes.push(`ac-button--type-${this.types}`);
+    } else {
+      classes.push(`ac-button--${this.variant}`);
+    }
+
     if (this.iconOnly) {
       classes.push('ac-button--icon-only');
     }
@@ -135,6 +152,10 @@ export class AcButton extends LitElement {
 
     if (this.disabled) {
       classes.push('ac-button--disabled');
+    }
+
+    if (this.active) {
+      classes.push('ac-button--active');
     }
 
     return classes.join(' ');

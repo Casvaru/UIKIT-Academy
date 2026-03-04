@@ -7,6 +7,8 @@
   --heading-font: 'Merriweather', sans-serif;
   --body-font: 'Lato', sans-serif;
 
+
+
   /* Escala Primary */
   --color-primary-100: #E5EBFF;
   --color-primary-200: #CCD7FF;
@@ -48,6 +50,8 @@
   --color-white: #e7e7e7;
   --color-white-medium: #CECECE;
   --color-white-dark: #A4A4A4;
+  --color-black-blue: #141518;
+  --color-white-blue: #1F2937;
 
   /* White transparent */
   --color-white-10: rgba(231, 231, 231, 0.1);
@@ -70,6 +74,28 @@
   --color-black-70: rgba(20, 21, 24, 0.7);
   --color-black-80: rgba(20, 21, 24, 0.8);
   --color-black-90: rgba(20, 21, 24, 0.9);
+
+  /* Primary transparent */
+  --color-primary-10: rgba(12, 65, 255, 0.1);
+  --color-primary-20: rgba(12, 65, 255, 0.2);
+  --color-primary-30: rgba(12, 65, 255, 0.3);
+  --color-primary-40: rgba(12, 65, 255, 0.4);
+  --color-primary-50: rgba(12, 65, 255, 0.5);
+  --color-primary-60: rgba(12, 65, 255, 0.6);
+  --color-primary-70: rgba(12, 65, 255, 0.7);
+  --color-primary-80: rgba(12, 65, 255, 0.8);
+  --color-primary-90: rgba(12, 65, 255, 0.9);
+
+  /* Secondary transparent */
+  --color-secondary-10: rgba(104, 12, 255, 0.1);
+  --color-secondary-20: rgba(104, 12, 255, 0.2);
+  --color-secondary-30: rgba(104, 12, 255, 0.3);
+  --color-secondary-40: rgba(104, 12, 255, 0.4);
+  --color-secondary-50: rgba(104, 12, 255, 0.5);
+  --color-secondary-60: rgba(104, 12, 255, 0.6);
+  --color-secondary-70: rgba(104, 12, 255, 0.7);
+  --color-secondary-80: rgba(104, 12, 255, 0.8);
+  --color-secondary-90: rgba(104, 12, 255, 0.9);
 
   /* Spacing*/
   --spacing-xs: 4px;
@@ -142,7 +168,7 @@
 
 /* Components*/
 
-:root{
+:root {
   /* Color tokens*/
   --color-primary: var(--color-primary-600);
   --color-primary-light: var(--color-primary-500);
@@ -180,13 +206,60 @@
   --tertiary-button-tertiary-background-active: color-mix(in srgb, var(--color-black-medium) 80%, #000 20%);
   --focus-ring-color: rgba(12, 65, 255, 0.9);
 
+/* =========================================
+     Variante: Nav
+     ========================================= */
+   /* Utilizamos un fallback directo por si el token global falla, 
+     asegurando siempre el cumplimiento de contraste WCAG AA */
+   --ac-btn-nav-bg-normal: var(--ac-btn-nav-bg-normal, transparent);
+   --ac-btn-nav-text-normal: var(--ac-btn-nav-text-normal, #4B5563);
+
+   --ac-btn-nav-bg-hover: var(--color-primary-20);
+   --ac-btn-nav-text-hover: var(--color-primary-600);
+
+   --ac-btn-nav-bg-active: transparent;
+   --ac-btn-nav-text-active: var(--color-primary-300);
+
+   --ac-btn-nav-bg-disabled: var(--ac-btn-nav-bg-disabled, transparent);
+   --ac-btn-nav-text-disabled: var(--ac-btn-nav-text-disabled, #9CA3AF);
+
+   --ac-btn-nav-indicator-active: var(--ac-btn-nav-indicator-active, #2563EB);
     
 }
+
+/* ac-card tokens */
+
+:root {
+  --ac-card-bg: var(--color-black-light);
+  --ac-card-border-color: var(--color-black-stroke);
+  --ac-card-border-width: var(--border-xs);
+  --ac-card-radius: var(--border-radius-sm);
+  --ac-card-padding: var(--spacing-base);
+
+  --ac-card-title-font: var(--heading-font);
+  --ac-card-title-size: var(--h6);
+  --ac-card-title-color: var(--color-white);
+  --ac-card-title-weight: bold;
+
+  --ac-card-icon-color: var(--color-white-medium);
+  --ac-card-arrow-color: var(--color-white-medium);
+}
+
 
 /**
  * Tokens for ac-card-dashboard
  * Include this CSS file if you want to override default variables per component.
  */
+
+ :root{
+  --card-dashboard-bg: var(--color-black-blue);
+  --card-dashboard-border: var(--color-white-blue);
+  --card-dashboard-radius: var(--border-radius-base);
+  --card-dashboard-padding: var(--spacing-lg);
+  --card-dashboard-gap: var(--spacing-base);
+  --card-dashboard-icon-bg: rgba(0, 113, 247, 0.15);
+  --card-dashboard-icon-color: var(--color-primary-600);
+ }
 /*
   --card-dashboard-bg: #1F2024;
   --card-dashboard-radius: 16px;
@@ -195,6 +268,23 @@
   --card-dashboard-icon-bg: rgba(0, 113, 247, 0.15);
   --card-dashboard-icon-color: #0071F7;
 */
+
+
+/* Header */
+
+:root {
+  --header-height: 72px;
+  --header-padding-x: var(--spacing-xl, 32px);
+  --header-padding-y: 0;
+  --header-bg: var(--color-black, #141518);
+  --header-border-color: var(--color-black-stroke, #40424A);
+  
+  --header-logo-margin-right: var(--spacing-3xl, 48px);
+  --header-nav-gap: var(--spacing-xl, 32px);
+  --header-actions-gap: var(--spacing-lg, 24px);
+  
+  --header-profile-size: 32px;
+}
 
 
 /* Section Header */

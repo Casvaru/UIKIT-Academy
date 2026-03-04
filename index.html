@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./src/components/button/ac-button.tokens.css" />
   <link rel="stylesheet" href="./src/components/section-header/ac-section-header.tokens.css" />
   <link rel="stylesheet" href="./src/components/card-dashboard/ac-card-dashboard.tokens.css" />
-  <link rel="stylesheet" href="./src/components/header/ac-header.tokens.css" />
+  <link rel="stylesheet" href="./src/components/card/ac-card.tokens.css" />
   <script type="module" src="./src/index.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -81,6 +81,8 @@
       <ac-button variant="primary" disabled>Button</ac-button>
       <ac-button variant="primary" disabled icon-name="check">Save</ac-button>
       <ac-button variant="primary" disabled icon-name="check" icon-only aria-label="Save"></ac-button>
+      <ac-button variant="primary" icon-name="shopping-cart">Cart</ac-button>
+      <ac-button variant="primary" icon-name="language">Lang</ac-button>
     </div>
   </div>
 
@@ -123,6 +125,21 @@
       <ac-button variant="tertiary" disabled>Button</ac-button>
       <ac-button variant="tertiary" disabled icon-name="bell">Notify</ac-button>
       <ac-button variant="tertiary" disabled icon-name="bell" icon-only aria-label="Notify"></ac-button>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ════════ TYPES: NAV ════════ -->
+  <div class="section">
+    <h2>Types: Nav</h2>
+
+    <div class="row">
+      <ac-button types="nav">Nav Link</ac-button>
+      <ac-button types="nav" active>Active</ac-button>
+      <ac-button types="nav" icon-name="home">With Icon</ac-button>
+      <ac-button types="nav" size="small">Small Nav</ac-button>
+      <ac-button types="nav" disabled>Disabled</ac-button>
     </div>
   </div>
 
@@ -181,14 +198,11 @@
   <div class="section" style="background-color: var(--color-black, #141518); padding: 20px 0; border-radius: 8px;">
     <h2>With Profile</h2>
     <ac-header has-profile>
-      <div slot="logo" style="width: 120px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: bold;">
-        ALERTA Academy
-      </div>
-      <nav slot="nav" style="display: flex; gap: 32px; font-size: 14px; font-weight: 600; color: #e7e7e7;">
-        <a href="#" style="color: inherit; text-decoration: none;">Home</a>
-        <a href="#" style="color: inherit; text-decoration: none;">Explore</a>
-        <a href="#" style="color: inherit; text-decoration: none;">My learning</a>
-        <a href="#" style="color: inherit; text-decoration: none;">Find couch</a>
+      <nav slot="nav" style="display: flex; gap: 8px;">
+        <ac-button types="nav" href="#" active>Home</ac-button>
+        <ac-button types="nav" href="#">Explore</ac-button>
+        <ac-button types="nav" href="#">My learning</ac-button>
+        <ac-button types="nav" href="#">Find couch</ac-button>
       </nav>
       <div slot="actions" style="display: flex; gap: 16px;">
         <ac-button variant="tertiary" icon-name="search" icon-only aria-label="Search" size="small"></ac-button>
@@ -202,23 +216,54 @@
 
     <h2 style="margin-top: 40px;">Without Profile</h2>
     <ac-header>
-      <div slot="logo" style="width: 120px; height: 32px; background: rgba(255,255,255,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: bold;">
-        ALERTA Academy
-      </div>
-      <nav slot="nav" style="display: flex; gap: 32px; font-size: 14px; font-weight: 600; color: #e7e7e7;">
-        <a href="#" style="color: inherit; text-decoration: none;">Home</a>
-        <a href="#" style="color: inherit; text-decoration: none;">Explore</a>
-        <a href="#" style="color: inherit; text-decoration: none;">My learning</a>
-        <a href="#" style="color: inherit; text-decoration: none;">Find couch</a>
+      <nav slot="nav" style="display: flex; gap: 8px;">
+        <ac-button types="nav" href="#" active>Home</ac-button>
+        <ac-button types="nav" href="#">Explore</ac-button>
+        <ac-button types="nav" href="#">My learning</ac-button>
+        <ac-button types="nav" href="#">Find couch</ac-button>
       </nav>
       <div slot="actions" style="display: flex; gap: 16px;">
-        <ac-button variant="tertiary" icon-name="search" icon-only aria-label="Search" size="small"></ac-button>
-        <ac-button variant="tertiary" icon-name="shopping-cart" icon-only aria-label="Cart" size="small"></ac-button>
-        <ac-button variant="tertiary" icon-name="heart" icon-only aria-label="Favorites" size="small"></ac-button>
-        <ac-button variant="tertiary" icon-name="translate" icon-only aria-label="Language" size="small"></ac-button>
-        <ac-button variant="tertiary" icon-name="bell" icon-only aria-label="Notifications" size="small"></ac-button>
+        <ac-button variant="secondary" icon-name="search" icon-only aria-label="Search" size="small"></ac-button>
+        <ac-button variant="secondary" icon-name="shopping-cart" icon-only aria-label="Cart" size="small"></ac-button>
+        <ac-button variant="secondary" icon-name="heart" icon-only aria-label="Favorites" size="small"></ac-button>
+        <ac-button variant="secondary" icon-name="translate" icon-only aria-label="Language" size="small"></ac-button>
+        <ac-button variant="secondary" icon-name="bell" icon-only aria-label="Notifications" size="small"></ac-button>
       </div>
     </ac-header>
+  </div>
+
+  <hr />
+
+  <!-- ════════ ac-card ════════ -->
+  <h1>UIKIT-Academy — ac-card</h1>
+
+  <div class="section" style="display: flex; flex-direction: column; gap: 24px; max-width: 500px;">
+    <div>
+      <p class="label">With Title & Arrow (Header)</p>
+      <ac-card title="Title card" has-arrow>
+        <div style="height: 150px; border: 2px dashed rgba(255,255,255,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);">
+          Change the instance
+        </div>
+      </ac-card>
+    </div>
+
+    <div>
+      <p class="label">Without Title (Arrow hidden even if set)</p>
+      <ac-card has-arrow>
+        <div style="height: 150px; border: 2px dashed rgba(255,255,255,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);">
+          Change the instance
+        </div>
+      </ac-card>
+    </div>
+
+    <div>
+      <p class="label">With Title, Arrow & Href</p>
+      <ac-card title="Link Card" has-arrow href="https://google.com" target="_blank">
+        <div style="height: 150px; border: 2px dashed rgba(255,255,255,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);">
+          Click the arrow to go to Google
+        </div>
+      </ac-card>
+    </div>
   </div>
 
 </body>

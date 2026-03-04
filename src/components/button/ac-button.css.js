@@ -153,6 +153,34 @@ export const acButtonStyles = css`
     width: var(--button-height-small, 36px);
   }
 
+  /* ═══════════════════════════════════════
+     TYPES variant (e.g. nav)
+     ═══════════════════════════════════════ */
+  .ac-button--type-nav {
+    background-color: var(--ac-btn-nav-bg-normal, transparent);
+    color: var(--ac-btn-nav-text-normal, #CECECE);
+    border-color: transparent;
+  }
+
+  .ac-button--type-nav:hover:not(.ac-button--disabled) {
+    background-color: var(--ac-btn-nav-bg-hover);
+    color: var(--ac-btn-nav-text-hover);
+  }
+
+  /* Estado Active (Seleccionado/Ruta Actual) */
+  .ac-button--type-nav.ac-button--active,
+  .ac-button--type-nav:active:not(.ac-button--disabled) {
+    background-color: var(--ac-btn-nav-bg-active, rgba(255, 255, 255, 0.1));
+    color: var(--ac-btn-nav-text-active, #FFFFFF);
+  }
+
+  .ac-button--type-nav.ac-button--disabled {
+    background-color: var(--ac-btn-nav-bg-disabled, transparent);
+    color: var(--ac-btn-nav-text-disabled, #A4A4A4);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
   @media (max-width: 1024px) {
     :host {
       display: block;
